@@ -1,22 +1,18 @@
-class Dragon {
-    name: string;
-    rider: string;
-    temperment: string;
-    timesEaten: number;
-    hungry: boolean
+function createDragon(dragonName:string, dragonRider: string, dragonTemperment: string) {
+    const name = dragonName
+    const rider = dragonRider
+    const temperment = dragonTemperment
+    let hungry = true
+    let timesEaten = 0
 
-    constructor(theName: string, theRider: string, theTemperment: string) {
-        this.name = theName;
-        this.rider = theRider;
-        this.temperment = theTemperment;
-        this.timesEaten = 0;
-        this.hungry = true
+    return {
+        name,
+        rider,
+        temperment,
+        hungry,
+        timesEaten
     }
-};
-
-function createDragon(name:string, rider: string, temperment: string) {
-    return new Dragon(name, rider, temperment)
-};
+}    
 
 function greetRider(dragon): string {
     return `Hi, ${dragon.rider}!`
@@ -39,7 +35,6 @@ function findFireBreathers(dragons): object[] {
 
     return fireBreathers
 }
-
 
 module.exports = {
     createDragon, 

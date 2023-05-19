@@ -1,18 +1,17 @@
-var Dragon = /** @class */ (function () {
-    function Dragon(theName, theRider, theTemperment) {
-        this.name = theName;
-        this.rider = theRider;
-        this.temperment = theTemperment;
-        this.timesEaten = 0;
-        this.hungry = true;
-    }
-    return Dragon;
-}());
-;
-function createDragon(name, rider, temperment) {
-    return new Dragon(name, rider, temperment);
+function createDragon(dragonName, dragonRider, dragonTemperment) {
+    var name = dragonName;
+    var rider = dragonRider;
+    var temperment = dragonTemperment;
+    var hungry = true;
+    var timesEaten = 0;
+    return {
+        name: name,
+        rider: rider,
+        temperment: temperment,
+        hungry: hungry,
+        timesEaten: timesEaten
+    };
 }
-;
 function greetRider(dragon) {
     return "Hi, ".concat(dragon.rider, "!");
 }
